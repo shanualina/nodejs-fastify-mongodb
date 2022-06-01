@@ -1,0 +1,19 @@
+{
+  "name": "fastify-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "boom": "^7.3.0",
+    "fastify": "^3.29.0",
+    "fastify-plugin": "^3.0.1",
+    "mongoose": "^6.3.5",
+    "nodemon": "^2.0.16"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "shanoo",
+  "license": "ISC"
+}
