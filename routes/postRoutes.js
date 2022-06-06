@@ -1,7 +1,7 @@
 const blogController = require('../controller/postCtrl');
 const routes = [{
         method: 'GET',
-        url: '/api/posts',
+        url: '/api/allpost',
         handler: blogController.getAllPost
     },
     {
@@ -15,7 +15,7 @@ const routes = [{
         handler: blogController.addNewPost,
     },
     {
-        method: 'PUT',
+        method: 'POST',
         url: '/api/post/:id',
         handler: blogController.updatePost
     },
