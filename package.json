@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
+    "@fastify/cors": "^7.0.0",
     "bcrypt": "^5.0.1",
     "bcryptjs": "^2.4.3",
     "boom": "^7.3.0",

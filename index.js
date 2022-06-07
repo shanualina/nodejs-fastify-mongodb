@@ -11,8 +11,10 @@ const app = fastify({
 
 app.register(db)
 app.register(multer.contentParser)
-
-
+app.register(require('@fastify/cors'), {
+    origin: "*",
+    corsOptions: 200
+})
 routes.forEach((route, index) => {
     app.route(route)
 })
