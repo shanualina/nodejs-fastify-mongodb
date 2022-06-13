@@ -8,7 +8,7 @@ const stateSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    countyId:{
+    countryId:{
         type: String,
         required: true
     },
