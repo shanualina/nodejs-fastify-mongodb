@@ -34,12 +34,24 @@ const userSchema = new mongoose.Schema({
         type: Number,
         required: true
     },
-    userName:{
+    userName: {
         type: String,
         required: true,
         // unique: true,
     },
-    password:{
+    password: {
+        type: String,
+        required: true
+    },
+    stateId: {
+        type: String,
+        required: true
+    },
+    cityId: {
+        type: String,
+        required: true
+    },
+    countryId: {
         type: String,
         required: true
     }

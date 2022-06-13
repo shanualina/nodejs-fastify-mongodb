@@ -32,10 +32,13 @@ exports.addNewUser = async (req, res, reply) => {
             gender: req.body.gender,
             mobileNo: req.body.mobileNo,
             address: req.body.address,
-            profileImage: 'user.png',
+            profileImage: 'images/' + req.file.filename,
             status: req.body.status,
             userName: req.body.userName,
             password: bcrypt.hashSync(req.body.password, 8),
+            stateId: req.body.stateId,
+            cityId: req.body.cityId,
+            countryId: req.bcrypt.countryId
         });
         let newuser = await user.save();
         if (newuser) {

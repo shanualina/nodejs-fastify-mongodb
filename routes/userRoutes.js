@@ -24,6 +24,7 @@ const routes = [{
 {
     method: 'POST',
     url: '/api/user',
+    preHandler: upload.single('image'),
     handler: userController.addNewUser,
 },
 {
