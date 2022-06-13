@@ -20,7 +20,7 @@ const userSchema = new mongoose.Schema({
     mobileNo: {
         type: Number,
         required: true,
-        unique: true,
+        // unique: true,
     },
     address: {
         type: String,
@@ -37,7 +37,7 @@ const userSchema = new mongoose.Schema({
     userName:{
         type: String,
         required: true,
-        unique: true,
+        // unique: true,
     },
     password:{
         type: String,
@@ -46,5 +46,5 @@ const userSchema = new mongoose.Schema({
 }, {
     timestamps: true
 })
-userSchema.plugin(uniqueValidator);
+// userSchema.plugin(uniqueValidator);
 module.exports = mongoose.model('User', userSchema)

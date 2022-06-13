@@ -3,8 +3,12 @@ const PORT = process.env.PORT || 3000;
 const db = require("./config/db")
 const routes = require("./routes/postRoutes")
 const UersRoutes = require("./routes/userRoutes");
+const countryRoutes = require("./routes/countryRoutes");
+const stateRoutes = require("./routes/stateRoutes");
+const cityRoutes = require("./routes/cityRoutes");
+
 const multer = require('fastify-multer') // or import multer from 'fastify-multer'
-const upload = multer({ dest: 'uploads/' })
+
 const app = fastify({
     logger: true
 })
@@ -21,6 +25,16 @@ routes.forEach((route, index) => {
 UersRoutes.forEach((route, index) => {
     app.route(route)
 })
+countryRoutes.forEach((route, index) => {
+    app.route(route)
+})
+stateRoutes.forEach((route, index) => {
+    app.route(route)
+})
+cityRoutes.forEach((route, index) => {
+    app.route(route)
+})
+
 app.get("/", async () => {
     return {
         Message: "Fastify is On Fire"

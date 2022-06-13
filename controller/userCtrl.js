@@ -49,8 +49,6 @@ exports.addNewUser = async (req, res, reply) => {
     }
 }
 //update user by id
-// var uploadImage = multer(imagesUpload).single('image');
-
 exports.updateUser = async (req, reply) => {
     try {
         const id = req.params.id;

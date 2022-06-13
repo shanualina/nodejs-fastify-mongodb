@@ -1,18 +1,14 @@
 const mongoose = require('mongoose')
-const postSchema = new mongoose.Schema({
-    userId: {
+const stateSchema = new mongoose.Schema({
+    name: {
         type: String,
         required: true
     },
-    title: {
+    status: {
         type: String,
         required: true
     },
-    content: {
-        type: String,
-        required: true
-    },
-    category: {
+    countyId:{
         type: String,
         required: true
     },
@@ -23,4 +19,4 @@ const postSchema = new mongoose.Schema({
 }, {
     timestamps: true
 })
-module.exports = mongoose.model('POST', postSchema)
+module.exports = mongoose.model('state', stateSchema)
