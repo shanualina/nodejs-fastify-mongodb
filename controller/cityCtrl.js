@@ -47,3 +47,14 @@ exports.updateCity = async (req, reply) => {
         throw boom.boomify(err)
     }
 }
+
+//get all state by coutry id
+exports.getAllCityByStateId = async (req, reply) => {
+    try {
+        const stateId = req.params.stateId;
+        let city = await cityModel.find({ stateId: stateId });
+        return city;
+    } catch (err) {
+        throw boom.boomify(err)
+    }
+}

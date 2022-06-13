@@ -47,3 +47,13 @@ exports.updateState = async (req, reply) => {
         throw boom.boomify(err)
     }
 }
+//get all state by coutry id
+exports.getAllStateByCountyId = async (req, reply) => {
+    try {
+        const countrId = req.params.countrId
+        let state = await stateModel.find({ countrId: countrId });
+        return state
+    } catch (err) {
+        throw boom.boomify(err)
+    }
+}

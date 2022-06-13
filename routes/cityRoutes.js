@@ -11,6 +11,11 @@ const routes = [{
     handler: cityController.getSingleCity
 },
 {
+    method: 'GET',
+    url: '/api/city/:stateId',
+    handler: cityController.getAllCityByStateId
+},
+{
     method: 'POST',
     url: '/api/city',
     handler: cityController.addCity,
