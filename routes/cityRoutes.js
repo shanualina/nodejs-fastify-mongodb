@@ -12,7 +12,7 @@ const routes = [{
 },
 {
     method: 'GET',
-    url: '/api/city/:stateId',
+    url: '/api/cityBY/:stateId',
     handler: cityController.getAllCityByStateId
 },
 {

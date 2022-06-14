@@ -6,7 +6,7 @@ const UersRoutes = require("./routes/userRoutes");
 const countryRoutes = require("./routes/countryRoutes");
 const stateRoutes = require("./routes/stateRoutes");
 const cityRoutes = require("./routes/cityRoutes");
-
+const path = require('path')
 const multer = require('fastify-multer') // or import multer from 'fastify-multer'
 
 const app = fastify({
@@ -14,7 +14,11 @@ const app = fastify({
 })
 
 app.register(db)
-app.register(multer.contentParser)
+app.register(multer.contentParser);
+app.register(require('fastify-static'), {
+     root: path.join(__dirname, 'uploads'),
+    prefix: '/publics/',
+})
 app.register(require('@fastify/cors'), {
     origin: "*",
     corsOptions: 200
